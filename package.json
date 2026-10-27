@@ -1,0 +1,15 @@
+{
+  "name": "webkit-jank",
+  "version": "0.1.0",
+  "description": "Measure scroll smoothness in Safari's engine, headless: frame intervals, frames over 34 and 50 ms, worst frame and black frames.",
+  "type": "module",
+  "bin": { "webkit-jank": "./webkit-jank.mjs" },
+  "files": ["webkit-jank.mjs", "README.md", "LICENSE"],
+  "scripts": { "test": "node test/test.mjs" },
+  "engines": { "node": ">=18" },
+  "dependencies": { "playwright": "^1.48.0" },
+  "keywords": ["safari", "webkit", "scroll", "jank", "performance", "frame-rate", "scroll-driven-animations", "playwright"],
+  "author": "Black Label Tec (https://blacklabeltec.com)",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "https://github.com/mthburnsbarber-web/webkit-jank.git" }
+}

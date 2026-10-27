@@ -1,0 +1,4 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Janky: a scroll handler that blocks the main thread</title>
+<style>body{margin:0;font:20px system-ui}section{height:100vh;display:grid;place-items:center}section:nth-child(odd){background:#eee}</style></head>
+<body><section>One</section><section>Two</section><section>Three</section><section>Four</section><section>Five</section><section>Six</section>
+<script>let n = 0; addEventListener('scroll', () => { if (++n % 8) return; const t = performance.now(); while (performance.now() - t < 70) {} }, { passive: true });</script></body></html>
